@@ -1,9 +1,14 @@
 import {FaPaintBrush} from "react-icons/fa";
+import "bootstrap/dist/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
-        <h1>Samric.io <FaPaintBrush/></h1>
+        <header>
+            <h1>Samric.io <FaPaintBrush/></h1>
+        </header>
+        
+
     </div>
   );
 }
