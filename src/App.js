@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-        <h1>asdf</h1>
+        <h1>Samric.io</h1>
     </div>
   );
 }
