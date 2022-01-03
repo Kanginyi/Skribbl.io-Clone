@@ -173,20 +173,39 @@
     padding: 5px;
 }
 
-#homepage-made-by {
+#homepage-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
     color: rgb(173, 216, 230);
     font-size: 15px;
     font-weight: bold;
 }
 
-#homepage-made-by a {
+footer div a {
     text-decoration: none;
     color: rgb(173, 216, 230);
 }
 
-#homepage-made-by a:hover {
+footer div a:hover {
     text-decoration: underline;
     color: rgb(95, 158, 160);
+}
+
+footer div:nth-child(2) {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer div:nth-child(3) {
+    text-align: center;
+    color: rgb(140, 140, 140);
+    font-size: 14px;
+    font-weight: 350;
 }
 
 .skribblio {
