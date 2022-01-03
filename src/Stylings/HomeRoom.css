@@ -160,6 +160,10 @@
     list-style: none;
 }
 
+#details-section summary:hover {
+    color: rgb(57, 132, 57);
+}
+
 #details-section div {
     font-size: 14px;
     line-height: 1.35;
