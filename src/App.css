@@ -1,11 +1,6 @@
 /* Spartan Bold 700 Font */
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
-.App {
-    background: rgb(49, 49, 49);
-    height: 100vh;
-}
-
 #rainbow-title {
     text-align: center;
     font-size: 7.5rem;
