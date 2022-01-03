@@ -1,6 +1,8 @@
 import React from 'react';
 import {FaPaintBrush} from "react-icons/fa";
 
+import "../../Stylings/HomeRoom.css";
+
 function HomeRoom() {
     return (
         <div className="App">
