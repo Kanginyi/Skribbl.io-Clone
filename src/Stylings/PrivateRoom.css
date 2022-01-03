@@ -1,7 +1,7 @@
 #private-room{
     position: relative;
     margin: 0 auto;
-    width: 80vw;
+    width: fit-content;
 }
 
 #settings-container{
@@ -23,7 +23,7 @@
 
 #lobby-container{
     width: 480px;
-    height: 445px;
+    height: fit-content;
     background-color: white;
     margin: 0 auto;
     padding: 5px;
@@ -33,7 +33,6 @@
     text-align: center;
     margin: 0 auto 5px auto;
     font-size: 25px;
-
 }
 
 .dropdown{
@@ -74,7 +73,7 @@
     background: rgb(92, 184, 92);
     border-color: rgb(76, 174, 76);
     padding: 10px 16px;
-    margin-top: 8px auto 0 auto;
+    margin: 8px auto 7px auto;
     font-size: 18px;
     line-height: 1.333333;
     width: 100%;
