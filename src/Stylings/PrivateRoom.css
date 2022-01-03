@@ -1,0 +1,46 @@
+#private-room{
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+#settings-container{
+    width: 480px;
+    height: 500px;
+    position: relative;
+    top: 100px;
+}
+
+#settings-container h2{
+    margin: 0 auto 10px auto;
+    width: fit-content;
+    position: relative;
+    color: white;
+    font-size: 40px;
+}
+
+#lobby-container{
+    width: 480px;
+    height: 445px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#lobby-container h3{
+    text-align: center;
+    margin: 0 auto 5px auto;
+    font-size: 25px;
+    border-bottom: 1px solid #ccc;   
+}
+
+#rounds{
+    width: 450px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+#rounds-container{
+    width: fit-content;
+    margin: 0 auto;
+}

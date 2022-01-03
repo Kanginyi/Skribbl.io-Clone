@@ -1,6 +1,5 @@
 import React from 'react';
 import {FaPaintBrush} from "react-icons/fa";
-
 import "../../Stylings/HomeRoom.css";
 
 function HomeRoom() {
@@ -20,7 +19,6 @@ function HomeRoom() {
                 <FaPaintBrush id="paintbrush"/>
             </h1>
         </header>
-        
     </div>
     );
 }
