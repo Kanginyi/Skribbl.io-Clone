@@ -55,8 +55,8 @@ function HomeRoom() {
                         <div id="news-update">
                             Hello World!<br/><br/>
                             We just:<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Homepage:</b> Created homepage elements & styled them<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Game Room:</b> Created the initial game room settings tab and styled them<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<b>Homepage:</b> Created homepage elements & styled them<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<b>Game Room:</b> Created the initial game room settings tab and styled them<br/>
                             <br/>
                             Please continue to check in as we work together to flesh out the rest of the application! :)<br/>
                             <br/>
