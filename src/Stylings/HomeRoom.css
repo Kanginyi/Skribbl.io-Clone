@@ -136,8 +136,21 @@
     border-color: rgb(38, 154, 188);
 }
 
-#how-to-play {
+#details-section {
     margin-top: 8px;
-    height: 360px;
+    height: fit-content;
     width: 500px;
+}
+
+.skribblio {
+    text-decoration: none;
+    color: rgb(41, 88, 163);
+}
+
+.skribblio:hover {
+    color: rgb(106, 143, 204);
+}
+
+.skribblio:active {
+    color: rgb(41, 88, 163);
 }
