@@ -11,7 +11,6 @@ function GameRoom() {
            <p>Canvas in the middle</p>
             {/* Either has nothing on the bottom or has tools for you to click with on the bottom */}
            <p>Activity/Chat on the right side</p>
-           <input type="text">Type your guess here...</input>
        </div>
     );
 }
