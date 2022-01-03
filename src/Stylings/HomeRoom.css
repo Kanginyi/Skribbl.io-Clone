@@ -154,3 +154,13 @@
 .skribblio:active {
     color: rgb(41, 88, 163);
 }
+
+#details-section summary {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
