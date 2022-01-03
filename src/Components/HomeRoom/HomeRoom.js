@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaPaintBrush} from "react-icons/fa";
+import {BsFillSuitHeartFill} from "react-icons/bs";
 
 import "../../Stylings/HomeRoom.css";
 
@@ -48,10 +49,22 @@ function HomeRoom() {
                 </div>
             </section>
 
-            <section id="how-to-play" className="homepage-containers">
+            <section id="details-section" className="homepage-containers">
+                <details open>
+                    <summary>News</summary>
+                        <p>Hello!</p><br/>
+                        <p>We just:</p>
+                        <p><b>Homepage:</b> Created homepage elements & styled them</p>
+                        <p><b>Game Room:</b> Created the initial game room settings tab and styled them</p>
+                        <br/>
+                        <p>Please continue to check in as we work together to flesh out the rest of the application! :)</p>
+                        <br/>
+                        <p>Thanks so much <BsFillSuitHeartFill style={{color: "red"}}/></p>
+                </details>
+
                 <details>
                     <summary>About</summary>
-                        <p>This is a website clone based on <a href="https://skribbl.io/" target="_blank">Skribbl.io</a>; a website where you can play a Pictionary-style game.</p>
+                        <p>This is a website clone based on <a className="skribblio" href="https://skribbl.io/" target="_blank"><b>Skribbl.io</b></a>; a website where you can play a Pictionary-style game.</p>
                         <p>One game consists of any number of rounds, where one person is the artist and the others are the guessers. The artist will draw out their chosen word while the others will have to guess what it is in order to gain points.</p>
                         <p>The person with the most points when all the rounds are up will then be crowned as the winner. WOOOOOO!</p>
                 </details>
