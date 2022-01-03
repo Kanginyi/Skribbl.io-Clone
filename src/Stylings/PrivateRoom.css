@@ -73,23 +73,16 @@
 #start-custom-button {
     background: rgb(92, 184, 92);
     border-color: rgb(76, 174, 76);
-
     padding: 10px 16px;
-    margin-top: 8px;
-
+    margin-top: 8px auto 0 auto;
     font-size: 18px;
     line-height: 1.333333;
-
     width: 100%;
     color: white;
-
     border: 1px solid transparent;
     border-radius: 5px;
-    margin-bottom: 0;
-
     font-weight: 400;
     user-select: none;
-
     cursor: pointer;
 }
 
