@@ -52,8 +52,8 @@ function HomeRoom() {
                 <details>
                     <summary>About</summary>
                         <p>This is a website clone based on <a href="https://skribbl.io/" target="_blank">Skribbl.io</a>; a website where you can play a Pictionary-style game.</p>
-                        <p>One game consists of any number of rounds, where one person is the artist and the others are the guessers. The artist will draw out their chosen word while the others will have to guess what it is in order go gain points.</p>
-                        <p>The person with the most points when all the rounds are up will then be crowned as the winner WOOOOOO!</p>
+                        <p>One game consists of any number of rounds, where one person is the artist and the others are the guessers. The artist will draw out their chosen word while the others will have to guess what it is in order to gain points.</p>
+                        <p>The person with the most points when all the rounds are up will then be crowned as the winner. WOOOOOO!</p>
                 </details>
                     
                 <details>
