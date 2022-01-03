@@ -31,16 +31,31 @@
     text-align: center;
     margin: 0 auto 5px auto;
     font-size: 25px;
-    border-bottom: 1px solid #ccc;   
+
 }
 
 #rounds{
     width: 450px;
     height: 35px;
-    margin: 0 auto;
+    margin: 5px auto;
+    border: 1px solid #ccc;  
+    border-radius: 5px; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 0 2px 15px;
+}
+
+.round-entry{
+    position: relative;
+    margin-left: 100px;
+    width: fit-content;
+    padding: 0px 5px;
 }
 
 #rounds-container{
     width: fit-content;
     margin: 0 auto;
+    border-top: 1px solid #ccc;   
+    padding: 5px;
 }
