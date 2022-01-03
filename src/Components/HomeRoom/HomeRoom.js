@@ -52,28 +52,34 @@ function HomeRoom() {
             <section id="details-section" className="homepage-containers">
                 <details open>
                     <summary>News</summary>
-                        <p>Hello!</p><br/>
-                        <p>We just:</p>
-                        <p><b>Homepage:</b> Created homepage elements & styled them</p>
-                        <p><b>Game Room:</b> Created the initial game room settings tab and styled them</p>
-                        <br/>
-                        <p>Please continue to check in as we work together to flesh out the rest of the application! :)</p>
-                        <br/>
-                        <p>Thanks so much <BsFillSuitHeartFill style={{color: "red"}}/></p>
+                        <div id="news-update">
+                            Hello World!<br/><br/>
+                            We just:<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Homepage:</b> Created homepage elements & styled them<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Game Room:</b> Created the initial game room settings tab and styled them<br/>
+                            <br/>
+                            Please continue to check in as we work together to flesh out the rest of the application! :)<br/>
+                            <br/>
+                            <i>Thanks so much</i> <BsFillSuitHeartFill style={{color: "red"}}/>
+                        </div>
                 </details>
 
                 <details>
                     <summary>About</summary>
-                        <p>This is a website clone based on <a className="skribblio" href="https://skribbl.io/" target="_blank"><b>Skribbl.io</b></a>; a website where you can play a Pictionary-style game.</p>
-                        <p>One game consists of any number of rounds, where one person is the artist and the others are the guessers. The artist will draw out their chosen word while the others will have to guess what it is in order to gain points.</p>
-                        <p>The person with the most points when all the rounds are up will then be crowned as the winner. WOOOOOO!</p>
+                        <div>
+                            This is a website clone based on <a className="skribblio" href="https://skribbl.io/" target="_blank"><b>Skribbl.io</b></a>; a website where you can play a Pictionary-style game.<br/>
+                            One game consists of any number of rounds, where one person is the artist and the others are the guessers. The artist will draw out their chosen word while the others will have to guess what it is in order to gain points.<br/>
+                            The person with the most points when all the rounds are up will then be crowned the winner. WOOOOOO!
+                        </div>
                 </details>
                     
                 <details>
                     <summary>How to Play</summary>
-                        <p><b>Artist:</b> When you're the artist, you will have to choose a word from three options and try to best draw that word out in the allotted time.</p>
-                        <p><b>Guesser:</b> When you're a guesser, you'll have to try to figure out what the artist is drawing. Type your guess into the chat and if you're right, you'll get points!</p>
-                        <p>Be fast though; the earlier you guess the drawn word, the more points you get!</p>
+                        <div>
+                            <b>Artist:</b> When you're the artist, you will have to choose a word from three options and try to best draw that word out in the allotted time.<br/>
+                            <b>Guesser:</b> When you're a guesser, you'll have to try to figure out what the artist is drawing. Type your guess into the chat and if you're right, you'll get points!<br/>
+                            Be fast though; the earlier you guess the drawn word, the more points you get.<br/>
+                        </div>
                 </details>
             </section>
             
