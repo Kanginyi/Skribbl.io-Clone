@@ -138,8 +138,32 @@
 
 #details-section {
     margin-top: 8px;
+    padding: 8px;
     height: fit-content;
     width: 500px;
+}
+
+#details-section summary {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
+
+#details-section div {
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+#news-update {
+    border-radius: 3px;
+    background-color: rgb(186, 255, 170);
+    border: 1px solid rgb(144, 234, 124);
+    color: #105B00;
+    padding: 5px;
 }
 
 .skribblio {
@@ -153,14 +177,4 @@
 
 .skribblio:active {
     color: rgb(41, 88, 163);
-}
-
-#details-section summary {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-
-    cursor: pointer;
-    text-decoration: none;
-    list-style: none;
 }
