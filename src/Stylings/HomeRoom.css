@@ -45,11 +45,13 @@
     /* margin-bottom: 8px; */
 }
 
-.homepage-containers {
-    background: white;
-
+#character-creation {
     height: 350px;
     width: 500px;
+}
+
+.homepage-containers {
+    background: white;
     border-radius: 3px;
 
     box-shadow: 0 0 4px 0 rgb(0 0 0 / 50%);
@@ -132,4 +134,10 @@
 #private-button:active {
     background-color: rgb(38, 154, 188);
     border-color: rgb(38, 154, 188);
+}
+
+#how-to-play {
+    margin-top: 8px;
+    height: 360px;
+    width: 500px;
 }
