@@ -4,14 +4,15 @@
     width: fit-content;
 }
 
-#settings-container{
+.settings-container{
     width: 480px;
     height: 500px;
     position: relative;
     top: 100px;
+    float: left;
 }
 
-#settings-container h2{
+.private-room-title{
     margin: 0 auto 10px auto;
     width: fit-content;
     position: relative;
@@ -129,4 +130,17 @@
 #checkbox-text{
     margin-left: 5px;
     font-size: 14px;
+}
+
+#private-room-players{
+    width: 400px;
+    height: 450px;
+    background-color: black;
+    float: left;
+    top: 100px;
+}
+
+#players-box{
+    width: 480px;
+    height: 420px;
 }

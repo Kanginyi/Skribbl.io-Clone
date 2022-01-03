@@ -2,8 +2,8 @@ import React from 'react';
 
 function Settings() {
     return (
-       <div id="settings-container">
-           <h2>Settings</h2>
+       <div className="settings-container">
+           <h2 className='private-room-title'>Settings</h2>
            <div id="lobby-container">
                <h3>Lobby</h3>
                <div id="rounds-container">
