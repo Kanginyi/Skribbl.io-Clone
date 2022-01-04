@@ -1,13 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import {FaPaintBrush} from "react-icons/fa";
 
 import {BsFillSuitHeartFill, BsGithub} from "react-icons/bs";
 import "../../Stylings/HomeRoom.css";
 
 function HomeRoom() {
+    const history = useNavigate()
+
+    function handlePrivateButton(){
+        history("/privateroom")
+    }
     return (
         <div className="App">
-
             <header id="homepage-header">
                 <h1 id="rainbow-title">
                     <span>S</span>
@@ -47,6 +52,7 @@ function HomeRoom() {
                         <button
                             id="private-button"
                             className="homepage-button"
+                            onClick={()=>handlePrivateButton()}
                         >Create Private Room</button>
                     </div>
                 </section>
