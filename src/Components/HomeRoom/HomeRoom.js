@@ -22,7 +22,8 @@ function HomeRoom() {
                     <span>i</span>
                     <span>c</span>
                     <span>.</span>
-                    <span>io</span>
+                    <span>i</span>
+                    <span>o</span>
                     &nbsp;
                     <FaPaintBrush id="paintbrush"/>
                 </h1>
