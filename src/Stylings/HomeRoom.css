@@ -82,6 +82,12 @@
     animation: leftToRight 1.25s infinite;
 }
 
+#paintbrush {
+    color: black;
+    transform: rotate(-5deg);
+    animation: rightToLeft 1.25s infinite;
+}
+
 @keyframes leftToRight {
     0% {
         transform: rotate(5deg);
