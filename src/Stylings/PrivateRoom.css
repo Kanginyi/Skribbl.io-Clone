@@ -25,6 +25,7 @@
     font-size: 40px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1.42857143;
+    font-weight: lighter;
 }
 
 #lobby-container{
@@ -165,7 +166,8 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1.42857143;
     top: 610px;
-    left: 300px;
+    left: 320px;
+    font-weight: lighter;
 }
 
 #invite-link{
