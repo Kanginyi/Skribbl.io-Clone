@@ -1,17 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ToolBox from './ToolBox';
+import Container from './Container'
 
 function GameRoom() {
+    const [utensil, SetUtensil] = useState({
+        tool: "brush",
+        weight: 5,
+        color: "black"
+    })
+
+    function handleUtensil(updateItem, keyHolder){
+        const newUtensil={...utensil}
+            if(updateItem === "eraser"){
+                newUtensil["color"] = "white";
+                newUtensil["tool"] = "eraser";
+                SetUtensil(()=>newUtensil)
+            } else {
+                newUtensil[keyHolder] = updateItem.toLowerCase()
+                SetUtensil(()=>newUtensil)
+            }
+    }
+
     return (
-       <div>
-           <p>Timer in seconds</p>
-           <p>Round X of Y</p>
-           <p>Ternary for isDrawing</p>
-           <p>Number of letters</p>
-           <p>Player list</p>
-           <p>Canvas in the middle</p>
-            {/* Either has nothing on the bottom or has tools for you to click with on the bottom */}
-           <p>Activity/Chat on the right side</p>
-       </div>
+        <div className="container">
+            <ToolBox handleUtensil={handleUtensil} utensil={utensil}/>
+            <Container utensil={utensil}/>
+        </div>
     );
 }
 
