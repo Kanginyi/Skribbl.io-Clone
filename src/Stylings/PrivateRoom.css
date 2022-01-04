@@ -1,17 +1,23 @@
-#private-room{
+#private-room-top{
     position: relative;
     margin: 0 auto;
-    width: 80vw;
+    width: fit-content;
 }
 
-#settings-container{
+#private-room-bottom{
+    position: relative;
+    height: 50px;
+}
+
+.settings-container{
     width: 480px;
     height: 500px;
     position: relative;
     top: 100px;
+    float: left;
 }
 
-#settings-container h2{
+.private-room-title{
     margin: 0 auto 10px auto;
     width: fit-content;
     position: relative;
@@ -19,11 +25,12 @@
     font-size: 40px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1.42857143;
+    font-weight: lighter;
 }
 
 #lobby-container{
     width: 480px;
-    height: 445px;
+    height: fit-content;
     background-color: white;
     margin: 0 auto;
     padding: 5px;
@@ -33,7 +40,6 @@
     text-align: center;
     margin: 0 auto 5px auto;
     font-size: 25px;
-
 }
 
 .dropdown{
@@ -74,7 +80,7 @@
     background: rgb(92, 184, 92);
     border-color: rgb(76, 174, 76);
     padding: 10px 16px;
-    margin-top: 8px auto 0 auto;
+    margin: 8px auto 7px auto;
     font-size: 18px;
     line-height: 1.333333;
     width: 100%;
@@ -130,4 +136,60 @@
 #checkbox-text{
     margin-left: 5px;
     font-size: 14px;
+}
+
+#private-room-players{
+    width: 400px;
+    height: 450px;
+    background-color: black;
+    float: left;
+    top: 100px;
+}
+
+#players-box{
+    width: 480px;
+    height: 420px;
+}
+
+#friend-invite-container{
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#private-room-invite{
+    height: fit-content;
+    position: absolute;
+    width: fit-content;
+    color: white;
+    font-size: 40px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    top: 610px;
+    left: 320px;
+    font-weight: lighter;
+}
+
+#invite-link{
+    width: 960px;
+    position: fixed;
+    top: 670px;
+    text-align: center;
+    padding: 3px 0px;
+    font-size: 18px;
+    text-shadow: rgba(82, 82, 82, 0.253) 1px 1px 5px;
+    color: rgb(212, 147, 24);
+    background-color: rgb(255, 255, 255);
+}
+
+#secret-invite-link{
+    width: 960px;
+    position: fixed;
+    top: 670px;
+    text-align: center;
+    padding: 3px 0px;
+    font-size: 18px;
+    text-shadow: rgba(82, 82, 82, 0.253) 1px 1px 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
