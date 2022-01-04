@@ -19,8 +19,8 @@ function Container({utensil}) {
         const canvas = canvasRef.current;
         canvas.width =1580;
         canvas.height = 1200;
-        canvas.style.width = "790px";
-        canvas.style.height = "600px";
+        canvas.style.width = "800px";
+        canvas.style.height = "610px";
 
         const context = canvas.getContext("2d")
         context.scale(2,2)
