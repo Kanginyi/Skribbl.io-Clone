@@ -121,9 +121,9 @@ function HomeRoom() {
                             <div id="news-update">
                                 Hello World!<br/><br/>
                                 We just:<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<b>Homepage:</b> Created homepage elements & styled them<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<b>Game Room:</b> Created the initial game room settings tab and styled them<br/>
-                                <br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢Implemented early phases of <strong>Redux</strong> into our application<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<strong>HomeRoom:</strong> Animate our title
+                                <br/><br/>
                                 Please continue to check in as we work together to flesh out the rest of the application! :)<br/>
                                 <br/>
                                 <i>Thanks so much</i> <BsFillSuitHeartFill style={{color: "red"}}/>
