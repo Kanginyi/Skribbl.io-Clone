@@ -129,8 +129,9 @@
 }
 
 #character-creation {
-    height: 350px;
+    height: fit-content;
     width: 500px;
+    padding-bottom: 10px;
 }
 
 .homepage-containers {
@@ -152,6 +153,13 @@
     color: #555;
     font-size: 14px;
     text-align: center;
+}
+
+#avatar-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #homepage-buttons-container {
