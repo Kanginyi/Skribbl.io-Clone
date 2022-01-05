@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import ToolBox from './ToolBox';
-import Container from './Container'
+import ToolBox from './Canvas/ToolBox';
+import Container from './Canvas/Container'
 
 function GameRoom() {
     const [utensil, SetUtensil] = useState({
