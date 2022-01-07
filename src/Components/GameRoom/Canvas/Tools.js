@@ -12,13 +12,13 @@ function Tools({handleUtensil}) {
     return (
         <div>
             <button className="tool-button" name="brush" onClick={handleClick}>
-                <BsBrush/>
+                <BsBrush className='react-icon-tool'/>
             </button>
             <button className="tool-button" name="bucket" onClick={handleClick}>
-                <BsPaintBucket/>
+                <BsPaintBucket className='react-icon-tool'/>
             </button>
             <button className="tool-button" name="eraser" onClick={handleClick}>
-                <BsEraser/>
+                <BsEraser className='react-icon-tool'/>
             </button>
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Tools from './Tools';
 import ColorContainer from './ColorContainer';
+import {BsTrash} from 'react-icons/bs'
 import Brush from './Brush';
 
 function ToolBox({handleUtensil, utensil}) {
@@ -15,6 +16,9 @@ function ToolBox({handleUtensil, utensil}) {
                 </div>
                 <div>
                     <Brush handleUtensil={handleUtensil}/>
+                </div>
+                <div>
+                    <button style={{width:"50px", height:"50px"}}><BsTrash/></button>
                 </div>
             </div>
         </>

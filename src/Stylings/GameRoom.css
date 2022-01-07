@@ -29,7 +29,7 @@
 .tool-button {
     width: 50px;
     height: 50px;
-    margin: 0 2px;
+    margin: 0 1.5px;
     cursor: pointer;
 }
 
@@ -98,10 +98,50 @@
     display: flex;
     width: fit-content;
     margin: 0 auto;
+    left: -50px;
+    position: relative;
+}
+
+#tool-box > div{
+    margin: 0 3px;
 }
 
 .weight-button{
     width: 50px;
     height: 50px;
-    margin: 0 2.5px;
+    margin: auto 1.5px;
+}
+
+.react-icon-tool{
+    width: 35px;
+    height: 35px;
+}
+
+#weight-1{
+    width: 4px;
+    height: 4px;
+}
+
+#weight-2{
+    width: 9px;
+    height: 9px;
+    margin: -2px 0;
+}
+
+#weight-3{
+    width: 18px;
+    height: 18px;
+    margin: -6px 0;
+}
+
+#weight-4{
+    width: 30px;
+    height: 30px;
+    margin: -10.5px 0;
+}
+
+#weight-container{
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
 }
