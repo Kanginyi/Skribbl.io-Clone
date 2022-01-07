@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaPaintBrush } from 'react-icons/fa';
+import { BsBrush } from 'react-icons/bs';
+import { BsPaintBucket } from 'react-icons/bs';
+import { BsEraser } from 'react-icons/bs';
 
 
 function Tools({handleUtensil}) {
@@ -9,9 +11,15 @@ function Tools({handleUtensil}) {
     }
     return (
         <div>
-            <button className="tool-button" name="brush" onClick={handleClick}><FaPaintBrush/></button>
-            <button className="tool-button" name="bucket" onClick={handleClick}></button>
-            <button className="tool-button" name="eraser" onClick={handleClick}></button>
+            <button className="tool-button" name="brush" onClick={handleClick}>
+                <BsBrush/>
+            </button>
+            <button className="tool-button" name="bucket" onClick={handleClick}>
+                <BsPaintBucket/>
+            </button>
+            <button className="tool-button" name="eraser" onClick={handleClick}>
+                <BsEraser/>
+            </button>
         </div>
     );
 }
