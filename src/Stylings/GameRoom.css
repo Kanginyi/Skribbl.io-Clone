@@ -156,3 +156,8 @@
     display: inline-block;
     vertical-align: top;
 }
+
+.not-selected-tool{
+    width: 35px;
+    filter: grayscale(1);
+}
