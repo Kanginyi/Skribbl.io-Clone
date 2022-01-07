@@ -1,7 +1,6 @@
 import React, {useState, useRef, useEffect } from 'react';
-import ToolBox from './ToolBox';
 
-function Container({utensil, handleUtensil}) {
+function Container({utensil}) {
     const {tool, weight, color} = utensil;
     const magic = {
         width: "800px",
@@ -82,9 +81,6 @@ function Container({utensil, handleUtensil}) {
                 onMouseMove={draw}
                 ref={canvasRef}
             />
-            <div>
-                <ToolBox handleUtensil={handleUtensil} utensil={utensil} resetCanvas={resetCanvas}/>
-            </div>
         </>
     );
 }
