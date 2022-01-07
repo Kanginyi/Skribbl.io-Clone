@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import ToolBox from './Canvas/ToolBox';
 import Container from './Canvas/Container'
 import ChatBox from './Chatbox/ChatBox';
 import PlayerContainer from './PlayerContainer/PlayerContainer';
@@ -33,15 +32,13 @@ function GameRoom() {
                     <PlayerContainer/>
                 </div>
                 <div>
-                    <Container utensil={utensil}/>
+                    <Container utensil={utensil} handleUtensil={handleUtensil}/>
                 </div>
                 <div>
                     <ChatBox />
                 </div>
             </div>
-            <div>
-                <ToolBox handleUtensil={handleUtensil} utensil={utensil}/>
-            </div>
+
         </div>
     );
 }

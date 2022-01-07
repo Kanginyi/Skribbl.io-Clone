@@ -4,7 +4,7 @@ import ColorContainer from './ColorContainer';
 import {BsTrash} from 'react-icons/bs'
 import Brush from './Brush';
 
-function ToolBox({handleUtensil, utensil}) {
+function ToolBox({handleUtensil, utensil, resetCanvas}) {
     return (
         <>
             <div id="tool-box">
@@ -18,7 +18,7 @@ function ToolBox({handleUtensil, utensil}) {
                     <Brush handleUtensil={handleUtensil}/>
                 </div>
                 <div>
-                    <button style={{width:"50px", height:"50px"}}><BsTrash id='react-icon-tool-trash'/></button>
+                    <button id="trash-icon" style={{width:"50px", height:"50px"}} onClick={()=>resetCanvas()}><BsTrash className='react-icon-tool'/></button>
                 </div>
             </div>
         </>

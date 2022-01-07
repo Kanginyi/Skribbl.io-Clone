@@ -1,6 +1,7 @@
-import React, {useState, useRef, useEffect } from 'react'
+import React, {useState, useRef, useEffect } from 'react';
+import ToolBox from './ToolBox';
 
-function Container({utensil}) {
+function Container({utensil, handleUtensil}) {
     const {tool, weight, color} = utensil;
     const magic = {
         width: "800px",
@@ -68,6 +69,11 @@ function Container({utensil}) {
         contextRef.current.stroke()
     }
 
+    function resetCanvas(){
+        canvasRef.current.getContext("2d").clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+        console.log(canvasRef.current.getContext("2d"))
+    }
+
     return (
         <>
             <canvas id="canvas" style={magic} 
@@ -76,6 +82,9 @@ function Container({utensil}) {
                 onMouseMove={draw}
                 ref={canvasRef}
             />
+            <div>
+                <ToolBox handleUtensil={handleUtensil} utensil={utensil} resetCanvas={resetCanvas}/>
+            </div>
         </>
     );
 }
