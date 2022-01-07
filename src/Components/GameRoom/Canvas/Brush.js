@@ -2,13 +2,11 @@ import React from 'react';
 
 function Brush({handleUtensil}) {   
     return (
-        <>
-            <select onChange={(event)=>handleUtensil(event.target.value, "weight")} id="brush-detail">
-                <option value="2">Thin</option>
-                <option selected value="5">Normal</option>
-                <option value="9">Thick</option>
-            </select>
-        </>
+        <div>
+            <button  className="weight-button" value="2" onChange={(event)=>handleUtensil(event.target.value, "weight")}>Thin</button>
+            <button className="weight-button" selected value="5" onChange={(event)=>handleUtensil(event.target.value, "weight")}>Normal</button>
+            <button className="weight-button" value="9" onChange={(event)=>handleUtensil(event.target.value, "weight")}>Thick</button>
+        </div>
     );
 }
 

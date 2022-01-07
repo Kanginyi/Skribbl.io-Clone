@@ -11,6 +11,7 @@ function HomeRoom() {
     function handlePrivateButton(){
         history("/privateroom")
     }
+    
     return (
         <div className="App">
             <header id="homepage-header">

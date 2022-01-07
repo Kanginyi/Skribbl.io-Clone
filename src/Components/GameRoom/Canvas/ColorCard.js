@@ -1,5 +1,4 @@
 import React from 'react';
-import './ToolBox.css'
 
 function ColorCard({color, handleUtensil}) {
     return (
