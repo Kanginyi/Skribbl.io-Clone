@@ -1,24 +1,18 @@
 import React from 'react';
-import { BsBrush } from 'react-icons/bs';
-import { BsPaintBucket } from 'react-icons/bs';
-import { BsEraser } from 'react-icons/bs';
 
 
 function Tools({handleUtensil}) {
 
-    function handleClick(e){
-        handleUtensil(e.target.getAttribute('name'), "tool")
-    }
     return (
         <div>
-            <button className="tool-button" onClick={handleClick}>
-                <BsBrush name="brush" className='react-icon-tool'/>
+            <button className="tool-button" name="brush" onClick={()=>handleUtensil("brush", "tool")}>
+                <img src={brush} style={{width:"12px", margin:"0 2px"}} alt="brush"/>
             </button>
-            <button className="tool-button" onClick={handleClick}>
-                <BsPaintBucket name="bucket" className='react-icon-tool'/>
+            <button className="tool-button" onClick={()=>handleUtensil("bucket", "tool")}>
+                <img src={bucket} style={{width:"12px"}} alt="bucket"/>
             </button>
-            <button className="tool-button" onClick={handleClick}>
-                <BsEraser name="eraser" className='react-icon-tool'/>
+            <button className="tool-button" onClick={()=>handleUtensil("eraser", "tool")}>
+                <img src={eraser} style={{width:"12px"}} alt="eraser"/>
             </button>
         </div>
     );
