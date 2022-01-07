@@ -1,6 +1,6 @@
 import React from 'react';
 import AvatarSelect from './AvatarSelect';
-import * as style from '@dicebear/avatars-avataaars-sprites';
+// import * as style from '@dicebear/avatars-avataaars-sprites';
 import { useNavigate } from 'react-router-dom'
 
 import {FaPaintBrush} from "react-icons/fa";

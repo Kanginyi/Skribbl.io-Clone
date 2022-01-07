@@ -10,13 +10,13 @@ function Tools({handleUtensil}) {
     return (
         <div>
             <button className="tool-button" name="brush" onClick={function(){handleUtensil("brush", "tool"); setToolSelected("brush")}}>
-                <img src={brush} className={toolSelected === "brush" ? 'react-icon-tool' : 'not-selected-tool'} alt="brush"/>
+                <img src={brush} className={toolSelected === "brush" ? 'selected-tool' : 'not-selected-tool'} alt="brush"/>
             </button>
             <button className="tool-button" onClick={function(){handleUtensil("bucket", "tool"); setToolSelected("bucket")}}>
-                <img src={bucket} className={toolSelected === "bucket" ? 'react-icon-tool' : 'not-selected-tool'} alt="bucket"/>
+                <img src={bucket} className={toolSelected === "bucket" ? 'selected-tool' : 'not-selected-tool'} alt="bucket"/>
             </button>
             <button className="tool-button" onClick={function(){handleUtensil("eraser", "tool"); setToolSelected("eraser")}}>
-                <img src={eraser} className={toolSelected === "eraser" ? 'react-icon-tool' : 'not-selected-tool'} alt="eraser"/>
+                <img src={eraser} className={toolSelected === "eraser" ? 'selected-tool' : 'not-selected-tool'} alt="eraser"/>
             </button>
         </div>
     );
