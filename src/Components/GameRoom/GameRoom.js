@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
-import ToolBox from './ToolBox';
-import Container from './Container'
+import ToolBox from './Canvas/ToolBox';
+import Container from './Canvas/Container'
+import ChatBox from './Chatbox/ChatBox';
+import PlayerContainer from './PlayerContainer/PlayerContainer';
+import Header from './Header/Header';
+import '../../Stylings/GameRoom.css'
 
 function GameRoom() {
     const [utensil, SetUtensil] = useState({
@@ -23,8 +27,21 @@ function GameRoom() {
 
     return (
         <div className="container">
-            <ToolBox handleUtensil={handleUtensil} utensil={utensil}/>
-            <Container utensil={utensil}/>
+            <Header/>
+            <div id = "middle-section-gameroom">
+                <div>
+                    <PlayerContainer/>
+                </div>
+                <div>
+                    <Container utensil={utensil}/>
+                </div>
+                <div>
+                    <ChatBox />
+                </div>
+            </div>
+            <div>
+                <ToolBox handleUtensil={handleUtensil} utensil={utensil}/>
+            </div>
         </div>
     );
 }

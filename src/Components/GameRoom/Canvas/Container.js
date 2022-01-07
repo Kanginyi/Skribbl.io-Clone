@@ -1,12 +1,12 @@
-import React, {useState, useRef, useEffect } from 'react'
+import React, {useState, useRef, useEffect } from 'react';
+import {BsTrash} from 'react-icons/bs'
 
 function Container({utensil}) {
     const {tool, weight, color} = utensil;
     const magic = {
-        width: "790px",
+        width: "800px",
         height:"600px",
         backgroundColor: "white",
-        border: "5px solid rgb(207, 207, 207)",
         borderStyle: "groove",
         cursor: "pointer"
     }
@@ -17,13 +17,13 @@ function Container({utensil}) {
 
     useEffect(()=> {
         const canvas = canvasRef.current;
-        canvas.width =1580;
+        canvas.width = 1600;
         canvas.height = 1200;
-        canvas.style.width = "790px";
+        canvas.style.width = "800px";
         canvas.style.height = "600px";
 
         const context = canvas.getContext("2d")
-        context.scale(2,2)
+        context.scale(2, 2)
         context.lineCap = "round"
         context.strokeStyle = `${color}`
         context.lineWidth = 5
@@ -69,6 +69,10 @@ function Container({utensil}) {
         contextRef.current.stroke()
     }
 
+    function resetCanvas(){
+        canvasRef.current.getContext("2d").clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    }
+
     return (
         <>
             <canvas id="canvas" style={magic} 
@@ -77,6 +81,9 @@ function Container({utensil}) {
                 onMouseMove={draw}
                 ref={canvasRef}
             />
+            <div>
+                <button id="trash-icon" style={{width:"50px", height:"50px"}} onClick={resetCanvas}><BsTrash className='react-icon-tool'/></button>
+            </div>
         </>
     );
 }

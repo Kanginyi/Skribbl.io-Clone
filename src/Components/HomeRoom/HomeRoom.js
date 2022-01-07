@@ -46,7 +46,6 @@ function HomeRoom() {
 
 
         // console.log(style);
-
     return (
         <div className="App">
             <header id="homepage-header">
