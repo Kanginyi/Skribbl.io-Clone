@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect } from 'react';
+import {BsTrash} from 'react-icons/bs'
 
 function Container({utensil}) {
     const {tool, weight, color} = utensil;
@@ -70,7 +71,6 @@ function Container({utensil}) {
 
     function resetCanvas(){
         canvasRef.current.getContext("2d").clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-        console.log(canvasRef.current.getContext("2d"))
     }
 
     return (
@@ -81,6 +81,9 @@ function Container({utensil}) {
                 onMouseMove={draw}
                 ref={canvasRef}
             />
+            <div>
+                <button id="trash-icon" style={{width:"50px", height:"50px"}} onClick={resetCanvas}><BsTrash className='react-icon-tool'/></button>
+            </div>
         </>
     );
 }

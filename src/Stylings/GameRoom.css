@@ -122,6 +122,9 @@
     background: none;
     border:none;
     cursor: pointer;
+    position: fixed;
+    left: 1090px;
+    margin-top: 10px;
 }
 
 #trash-icon:hover{
