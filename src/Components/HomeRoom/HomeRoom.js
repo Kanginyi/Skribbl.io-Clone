@@ -1,17 +1,51 @@
 import React from 'react';
+import AvatarSelect from './AvatarSelect';
+import * as style from '@dicebear/avatars-avataaars-sprites';
 import { useNavigate } from 'react-router-dom'
-import {FaPaintBrush} from "react-icons/fa";
 
+import {FaPaintBrush} from "react-icons/fa";
 import {BsFillSuitHeartFill, BsGithub} from "react-icons/bs";
 import "../../Stylings/HomeRoom.css";
+
+// Redux Elements
+import {useSelector} from "react-redux";
 
 function HomeRoom() {
     const history = useNavigate()
 
-    function handlePrivateButton(){
+    function handlePrivateButton() {
         history("/privateroom")
     }
+
+    // Redux Elements
+    const avatar = useSelector(state => state.avatar.value);
     
+
+    /* Dispatch exmaple
+        <button
+            onClick={() => {
+                dispatch(leftArrow({
+                    top: avatar.top + 1
+                }));
+            }}
+        >Bing</button>
+        <button
+            onClick={() => {
+                dispatch(rightArrow({
+
+                }));
+            }}
+        >Lata Bish</button>
+
+    */
+
+        const avatarArray = [];
+        for (const asdf in avatar) {
+            avatarArray.push(asdf);
+        }
+
+
+        // console.log(style);
     return (
         <div className="App">
             <header id="homepage-header">
@@ -45,6 +79,27 @@ function HomeRoom() {
                         </input>
                     </label>
 
+                    <div id="avatar-selection">
+                        {/* 14 different selection options */}
+                        <AvatarSelect avatar={avatar} name={avatarArray[0]} number={avatar.top} /> 
+                        <AvatarSelect avatar={avatar} name={avatarArray[1]} number={avatar.hatColor}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[2]} number={avatar.hairColor}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[3]} number={avatar.accessories}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[4]} number={avatar.accessoriesColor}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[5]} number={avatar.facialHair}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[6]} number={avatar.facialHairColor}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[7]} number={avatar.clothes}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[8]} number={avatar.clothesColor}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[9]} number={avatar.eyes}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[10]} number={avatar.eyebrow}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[11]} number={avatar.mouth}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[12]} number={avatar.skin}/>
+                        <AvatarSelect avatar={avatar} name={avatarArray[13]} number={avatar.clotheGraphics}/>
+
+
+
+                    </div>
+
                     <div id="homepage-buttons-container">
                         <button
                             id="play-button"
@@ -65,9 +120,9 @@ function HomeRoom() {
                             <div id="news-update">
                                 Hello World!<br/><br/>
                                 We just:<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<b>Homepage:</b> Created homepage elements & styled them<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<b>Game Room:</b> Created the initial game room settings tab and styled them<br/>
-                                <br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢Implemented early phases of <strong>Redux</strong> into our application<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<strong>HomeRoom:</strong> Animate our title
+                                <br/><br/>
                                 Please continue to check in as we work together to flesh out the rest of the application! :)<br/>
                                 <br/>
                                 <i>Thanks so much</i> <BsFillSuitHeartFill style={{color: "red"}}/>

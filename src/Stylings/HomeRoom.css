@@ -1,5 +1,9 @@
 /* Spartan Bold 700 Font */
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+/* Shadows Into Light Regular 500 Font  */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+/* Indie Flower Regular 400 Font */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .App {
     display: flex;
@@ -11,7 +15,8 @@
 #rainbow-title {
     text-align: center;
     font-size: 6.5rem;
-    font-family: 'Spartan', sans-serif;
+    /* font-family: 'Spartan', sans-serif; */
+    font-family: cursive;
     padding-top: 1.5rem;
 }
 
@@ -129,8 +134,9 @@
 }
 
 #character-creation {
-    height: 350px;
+    height: fit-content;
     width: 500px;
+    padding-bottom: 10px;
 }
 
 .homepage-containers {
@@ -152,6 +158,13 @@
     color: #555;
     font-size: 14px;
     text-align: center;
+}
+
+#avatar-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #homepage-buttons-container {
