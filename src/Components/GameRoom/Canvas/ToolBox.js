@@ -18,7 +18,7 @@ function ToolBox({handleUtensil, utensil}) {
                     <Brush handleUtensil={handleUtensil}/>
                 </div>
                 <div>
-                    <button style={{width:"50px", height:"50px"}}><BsTrash/></button>
+                    <button style={{width:"50px", height:"50px"}}><BsTrash id='react-icon-tool-trash'/></button>
                 </div>
             </div>
         </>

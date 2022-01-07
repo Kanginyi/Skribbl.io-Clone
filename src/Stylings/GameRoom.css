@@ -117,6 +117,12 @@
     height: 35px;
 }
 
+#react-icon-tool-trash{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+
 #weight-1{
     width: 4px;
     height: 4px;
