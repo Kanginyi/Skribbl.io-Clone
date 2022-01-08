@@ -5,7 +5,7 @@
     position: relative;
 }
 
-::selection {
+::selection{
     background-color: transparent;
 }
 
@@ -163,4 +163,10 @@
 .not-selected-tool{
     width: 35px;
     filter: grayscale(1);
+}
+
+.selected-tool{
+    width: 40px;
+    height: 40px;
+    mix-blend-mode: multiply;
 }
