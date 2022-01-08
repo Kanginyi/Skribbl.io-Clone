@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Settings() {
+    const history = useNavigate();
+
+    function startGame() {
+        history("/gameroom");
+    }
+
     return (
        <div className="settings-container">
            <h2 className='private-room-title'>Settings</h2>
@@ -10,7 +17,7 @@ function Settings() {
                     <p><strong>Rounds</strong></p>
                     <select className='dropdown'> 
                         <option className='round-entry'>2</option>
-                        <option className='round-entry'>3</option>
+                        <option selected className='round-entry'>3</option>
                         <option className='round-entry'>4</option>
                         <option className='round-entry'>5</option>
                         <option className='round-entry'>6</option>
@@ -27,7 +34,7 @@ function Settings() {
                         <option className='round-entry'>30</option>
                         <option className='round-entry'>40</option>
                         <option className='round-entry'>50</option>
-                        <option className='round-entry'>60</option>
+                        <option selected className='round-entry'>60</option>
                         <option className='round-entry'>70</option>
                         <option className='round-entry'>80</option>
                         <option className='round-entry'>90</option>
@@ -41,7 +48,8 @@ function Settings() {
                </div>
 
                 <input id="checkbox" type="checkbox" name="exclusive"/><span id="checkbox-text">Use custom words exculsively.</span>
-                <button id="start-custom-button">Start Game</button>
+
+                <button id="start-custom-button" onClick={() => startGame()}>Start Game</button>
            </div>
        </div>
     );
