@@ -68,10 +68,11 @@
 }
 
 #gameroom-header{
-    width: 1355px;
+    width: 1345px;
     height: 50px;
     background-color: white;
     display: flex;
+    margin-left: 5px;
 }
 
 #clock-div, #rounds-div{
