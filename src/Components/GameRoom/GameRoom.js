@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ToolBox from './Canvas/ToolBox';
-import Container from './Canvas/Container'
+import DrawingCanvas from './Canvas/DrawingCanvas'
 import ChatBox from './Chatbox/ChatBox';
 import PlayerContainer from './PlayerContainer/PlayerContainer';
 import Header from './Header/Header';
@@ -40,7 +40,7 @@ function GameRoom() {
                     <PlayerContainer/>
                 </div>
                 <div>
-                    <Container utensil={utensil}/>
+                    <DrawingCanvas utensil={utensil}/>
                 </div>
                 <div>
                     <ChatBox />

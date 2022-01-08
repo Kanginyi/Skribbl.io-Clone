@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect } from 'react';
 import {BsTrash} from 'react-icons/bs'
 
-function Container({utensil}) {
+function DrawingCanvas({utensil}) {
     const {tool, weight, color} = utensil;
     const magic = {
         width: "800px",
@@ -88,4 +88,4 @@ function Container({utensil}) {
     );
 }
 
-export default Container
+export default DrawingCanvas
