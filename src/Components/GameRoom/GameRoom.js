@@ -13,15 +13,22 @@ function GameRoom() {
         color: "black"
     })
 
+    const [lastColor, setLastColor] = useState(utensil["color"])
+
     function handleUtensil(updateItem, keyHolder){
-        const newUtensil={...utensil}
+        const newUtensil={...utensil};
             if(updateItem === "eraser"){
+                setLastColor(()=>utensil["color"])
                 newUtensil["color"] = "white";
                 newUtensil["tool"] = "eraser";
                 SetUtensil(()=>newUtensil)
             } else {
-                newUtensil[keyHolder] = updateItem.toLowerCase()
+                if(utensil["tool"] === "eraser"){
+                    newUtensil["color"] = lastColor;
+                } 
+                newUtensil[keyHolder] = updateItem.toLowerCase();
                 SetUtensil(()=>newUtensil)
+        
             }
     }
 
