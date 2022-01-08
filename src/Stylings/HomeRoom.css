@@ -1,12 +1,5 @@
-/* Caveat Semi-Bold 600 Font */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
-/* Overpass Black 900 Font */ /* Pretty good */
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@900&display=swap');
-/* Spartan Bold 700 Font */ 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 /* Gluten Semi-Bold 600 Font */ /* Might be it!!! */
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap');
-
 
 .App {
     display: flex;
@@ -18,10 +11,6 @@
 #rainbow-title {
     text-align: center;
     font-size: 6.5rem;
-    /* font-family: cursive; */
-    /* font-family: 'Caveat', cursive; */
-    /* font-family: 'Overpass', sans-serif; */
-    /* font-family: 'Spartan', sans-serif; */
     font-family: 'Gluten', cursive;
 
     padding-top: 1.5rem;
