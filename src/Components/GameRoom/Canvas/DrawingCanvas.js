@@ -82,7 +82,7 @@ function DrawingCanvas({utensil}) {
                 ref={canvasRef}
             />
             <div>
-                <button id="trash-icon" style={{width:"50px", height:"50px"}} onClick={resetCanvas}><BsTrash className='react-icon-tool'/></button>
+                <button id="trash-icon" onClick={resetCanvas}><BsTrash className='react-icon-tool'/></button>
             </div>
         </>
     );
