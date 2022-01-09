@@ -10,8 +10,14 @@ function ColorContainer({handleUtensil, utensil}) {
 
     return (
         <div>
-            <div className="selected-color" style={{backgroundColor:`${utensil.color}`}}></div>
-            <div id="color-grid">
+            <div
+                className="selected-color"
+                style={{backgroundColor:`${utensil.color}`}}
+                title="Color preview"
+            >
+            </div>
+
+            <div id="color-grid" title="Select a color">
                 {colorGrid}
             </div>
         </div>
