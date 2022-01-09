@@ -4,7 +4,7 @@ import {BsCircleFill} from 'react-icons/bs'
 function Brush({handleUtensil}) {   
 
     return (
-        <div id="weight-container">
+        <div id="weight-container" title="Set brush size">
             <button className="weight-button" value="4" onClick={()=>handleUtensil("4", "weight")}>
                 <BsCircleFill id="weight-1"/>
             </button>
