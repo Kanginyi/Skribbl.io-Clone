@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect } from 'react';
 import {BsTrash} from 'react-icons/bs'
+import FloodFill from 'q-floodfill'
 
 function DrawingCanvas({utensil}) {
     const {tool, weight, color} = utensil;
@@ -32,10 +33,12 @@ function DrawingCanvas({utensil}) {
 
     function mouseDown({nativeEvent}){
         if (tool === "bucket"){
-            const ctx = canvasRef.current.getContext("2d")
-            ctx.beginPath()
-            ctx.fillStyle = `${color}`
-            ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+            const {offsetX, offsetY} = nativeEvent
+            const context = canvasRef.current.getContext("2d")
+            const imgData = context.getImageData(0, 0, canvasRef.current.width, canvasRef.current.height)
+            const floodFill = new FloodFill(imgData)
+            floodFill.fill(color, offsetX, offsetY, 0)
+            context.putImageData(floodFill.imageData, 0, 0)
 
         } else if (tool === "brush"){
             const {offsetX, offsetY} = nativeEvent
@@ -45,7 +48,7 @@ function DrawingCanvas({utensil}) {
             canvasRef.current.getContext("2d").lineWidth = weight
             setIsDrawing(true)
 
-        } else{
+        } else { 
             const {offsetX, offsetY} = nativeEvent
             contextRef.current.beginPath()
             contextRef.current.moveTo(offsetX,offsetY)
