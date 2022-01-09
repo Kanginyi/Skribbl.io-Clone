@@ -3,8 +3,9 @@ import ColorCard from './ColorCard'
 
 function ColorContainer({handleUtensil, utensil}) {
 
-    const colorList = ["white", "lightgrey", "red", "orange", "yellow", "green", "skyblue", "purple", "violet"];
-    
+    const colorList = ["white", "silver", "red", "darkorange", "yellow", "lime", "deepskyblue", "midnightblue", "darkviolet", "hotpink", "sienna",
+    //Row 2
+    "black", "dimgray", "maroon", "orangered", "goldenrod","darkgreen", "dodgerblue", "navy", "indigo", "indianred", "saddlebrown"];
     const colorGrid = colorList.map((color) => <ColorCard handleUtensil={handleUtensil} key={color} color={color}/>)
 
     return (
