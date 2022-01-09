@@ -4,19 +4,42 @@ import bucket from './pictures/bucket.png'
 import eraser from './pictures/eraser.png'
 
 function Tools({handleUtensil}) {
-
     const [toolSelected, setToolSelected] = useState("brush")
 
     return (
         <div>
-            <button className="tool-button" name="brush" onClick={function(){handleUtensil("brush", "tool"); setToolSelected("brush")}}>
-                <img src={brush} className={toolSelected === "brush" ? 'selected-tool' : 'not-selected-tool'} alt="brush"/>
+            <button
+                className={toolSelected === "brush" ? 'selected-tool tool-button' : 'not-selected-tool tool-button'}
+                name="brush"
+                onClick={function(){handleUtensil("brush", "tool"); setToolSelected("brush")}}>
+                    <img
+                        src={brush}
+                        alt="brush"
+                        width="35px"
+                        height="35px"
+                    />
             </button>
-            <button className="tool-button" onClick={function(){handleUtensil("bucket", "tool"); setToolSelected("bucket")}}>
-                <img src={bucket} className={toolSelected === "bucket" ? 'selected-tool' : 'not-selected-tool'} alt="bucket"/>
+
+            <button
+                className={toolSelected === "bucket" ? 'selected-tool tool-button' : 'not-selected-tool tool-button'}
+                onClick={function(){handleUtensil("bucket", "tool"); setToolSelected("bucket")}}>
+                    <img
+                        src={bucket}
+                        alt="bucket"
+                        width="35px"
+                        height="35px"
+                    />
             </button>
-            <button className="tool-button" onClick={function(){handleUtensil("eraser", "tool"); setToolSelected("eraser")}}>
-                <img src={eraser} className={toolSelected === "eraser" ? 'selected-tool' : 'not-selected-tool'} alt="eraser"/>
+
+            <button
+                className={toolSelected === "eraser" ? 'selected-tool tool-button' : 'not-selected-tool tool-button'}
+                onClick={function(){handleUtensil("eraser", "tool"); setToolSelected("eraser")}}>
+                    <img
+                        src={eraser}
+                        alt="eraser"
+                        width="35px"
+                        height="35px"
+                    />
             </button>
         </div>
     );
