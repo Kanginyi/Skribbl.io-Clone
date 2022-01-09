@@ -34,7 +34,6 @@ function DrawingCanvas({utensil}) {
     function mouseDown({nativeEvent}){
         if (tool === "bucket"){
             const {x, y} = nativeEvent;
-            console.log(x,y)
             const context = canvasRef.current.getContext("2d")
             const imgData = context.getImageData(0, 0, canvasRef.current.width, canvasRef.current.height)
             const floodFill = new FloodFill(imgData)
