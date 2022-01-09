@@ -96,13 +96,6 @@
     margin: 0 3px;
 }
 
-.weight-button{
-    width: 50px;
-    height: 50px;
-    margin: auto 1.5px;
-    cursor: pointer;
-}
-
 .react-icon-tool{
     width: 35px;
     height: 35px;
@@ -131,6 +124,21 @@
     color: red;
     background: pink;
     box-shadow: 0 0 8px 1px red;
+}
+
+#trash-icon:active {
+    transform: scale(1.05);
+}
+
+.weight-button{
+    width: 50px;
+    height: 50px;
+    margin: auto 1.5px;
+    cursor: pointer;
+}
+
+.weight-button:active {
+    transform: scale(.95);
 }
 
 #weight-1{
@@ -172,6 +180,10 @@
 
 .tool-button:hover {
     border: 2px solid black;
+}
+
+.tool-button:active {
+    transform: scale(.95);
 }
 
 .not-selected-tool{
