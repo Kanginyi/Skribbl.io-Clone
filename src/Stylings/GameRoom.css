@@ -98,7 +98,7 @@
     display: flex;
     width: fit-content;
     margin: 0 auto;
-    left: -50px;
+    left: -100px;
     position: relative;
 }
 
@@ -119,15 +119,25 @@
 }
 
 #trash-icon{
-    background: none;
-    border:none;
+    /* background: none; */
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     cursor: pointer;
     position: absolute;
+    right: 345px;
+    bottom: 0;
+    color: rgb(133, 133, 133);
 }
 
 #trash-icon:hover{
-    transform: scale(1.05);
-
+    transform: scale(1.1);
+    color: red;
+    background: pink;
+    box-shadow: 0 0 8px 1px red;
 }
 
 #weight-1{
@@ -161,12 +171,12 @@
 
 .not-selected-tool{
     width: 35px;
+    height: 35px;
     filter: grayscale(1);
 }
 
 .selected-tool{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     mix-blend-mode: multiply;
-    margin-bottom: -3px;
 }
