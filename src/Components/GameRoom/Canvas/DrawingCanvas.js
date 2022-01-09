@@ -33,11 +33,12 @@ function DrawingCanvas({utensil}) {
 
     function mouseDown({nativeEvent}){
         if (tool === "bucket"){
-            const {offsetX, offsetY} = nativeEvent
+            console.log(nativeEvent)
+            const {clientX, clientY} = nativeEvent
             const context = canvasRef.current.getContext("2d")
             const imgData = context.getImageData(0, 0, canvasRef.current.width, canvasRef.current.height)
             const floodFill = new FloodFill(imgData)
-            floodFill.fill(color, offsetX, offsetY, 0)
+            floodFill.fill(color, clientX, clientY, 0)
             context.putImageData(floodFill.imageData, 0, 0)
 
         } else if (tool === "brush"){
