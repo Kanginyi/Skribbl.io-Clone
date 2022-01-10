@@ -31,13 +31,26 @@ function DrawingCanvas({utensil}) {
         contextRef.current = context;
     },[])
 
+    function location(evt, canvas2) {
+        let offsetX, offsetY;
+        if (evt.targetTouches) {
+          const rect = canvas2.getBoundingClientRect();
+          offsetX = Math.round(evt.targetTouches[0].pageX - rect.left);
+          offsetY = Math.round(evt.targetTouches[0].pageY - rect.top);
+        } else {
+          offsetX = evt.offsetX*2;
+          offsetY = evt.offsetY*2;
+        }
+        return { offsetX, offsetY };
+      }
+
     function mouseDown({nativeEvent}){
         if (tool === "bucket"){
-            const {x, y} = nativeEvent;
+            const { offsetX, offsetY } = location(nativeEvent, canvasRef.current.getContext("2d"));
             const context = canvasRef.current.getContext("2d")
             const imgData = context.getImageData(0, 0, canvasRef.current.width, canvasRef.current.height)
             const floodFill = new FloodFill(imgData)
-            floodFill.fill(color, x-228, y-98, 0)
+            floodFill.fill(color, offsetX, offsetY, 0)
             context.putImageData(floodFill.imageData, 0, 0)
 
         } else if (tool === "brush"){
