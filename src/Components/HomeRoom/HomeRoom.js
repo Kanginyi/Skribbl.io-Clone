@@ -19,33 +19,13 @@ function HomeRoom() {
 
     // Redux Elements
     const avatar = useSelector(state => state.avatar.value);
-    
 
-    /* Dispatch exmaple
-        <button
-            onClick={() => {
-                dispatch(leftArrow({
-                    top: avatar.top + 1
-                }));
-            }}
-        >Bing</button>
-        <button
-            onClick={() => {
-                dispatch(rightArrow({
+    const avatarArray = [];
 
-                }));
-            }}
-        >Lata Bish</button>
+    for (const asdf in avatar) {
+        avatarArray.push(asdf);
+    }
 
-    */
-
-        const avatarArray = [];
-        for (const asdf in avatar) {
-            avatarArray.push(asdf);
-        }
-
-
-        // console.log(style);
     return (
         <div className="App">
             <header id="homepage-header">
@@ -95,9 +75,6 @@ function HomeRoom() {
                         <AvatarSelect avatar={avatar} name={avatarArray[11]} number={avatar.mouth}/>
                         <AvatarSelect avatar={avatar} name={avatarArray[12]} number={avatar.skin}/>
                         <AvatarSelect avatar={avatar} name={avatarArray[13]} number={avatar.clotheGraphics}/>
-
-
-
                     </div>
 
                     <div id="homepage-buttons-container">

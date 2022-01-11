@@ -10,20 +10,20 @@ export const avatarSlice = createSlice({
     // Initial values of the state, passed in through the value object
     initialState: {
         value: {
-            top: 0,
-            hatColor: 0,
-            hairColor: 0,
-            accessories: 0,
-            accessoriesColor: 0,
-            facialHair: 0,
-            facialHairColor: 0,
-            clothes: 0,
-            clothesColor: 0,
-            eyes: 0,
-            eyebrow: 0,
-            mouth: 0,
-            skin: 0,
-            clotheGraphics: 0
+            top: 0, //37 items (1) -- switch case #
+            hatColor: 0, //18 items(2)
+            hairColor: 0, //12 items(3)
+            accessories: 0, //6 items(4)
+            accessoriesColor: 0, //18 items(2)
+            facialHair: 0, //10 items(5)
+            facialHairColor: 0, //12 items(3)
+            clothes: 0, //12 items(3)
+            clothesColor: 0, //18 items(2)
+            eyes: 0, //15 items(6)
+            eyebrow: 0, //19 items(7)
+            mouth: 0, //13 items(8)
+            skin: 0, //7 items(9)
+            clotheGraphics: 0 //10 items(5)
         }
     },
 
