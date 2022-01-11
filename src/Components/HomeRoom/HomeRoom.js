@@ -18,6 +18,7 @@ function HomeRoom() {
 
     // Redux Elements
     const avatar = useSelector(state => state.avatar.value);
+    console.log(avatar)
     const avatarArray = [];
 
     for (const asdf in avatar) {

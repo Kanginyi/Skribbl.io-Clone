@@ -25,7 +25,7 @@ export const avatarSlice = createSlice({
             mouth: 0, //13 items
             skin: 0, //7 items
             clotheGraphics: 0, //10 items
-            imageURL: ''
+            imageURL: 'https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=shortHair&hatColor[]=black&hairColor[]=auburn&accessories[]=kurt&accessoriesColor[]=black&facialHair[]=medium&facialHairColor[]=auburn&clothes[]=blazer&clothesColor[]=black&eyes[]=close&eyebrow[]=angry&mouth[]=concerned&skin[]=tanned&clotheGraphics[]=skullOutline'
         }
     },
 

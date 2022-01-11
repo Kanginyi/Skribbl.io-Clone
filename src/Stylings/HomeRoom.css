@@ -310,3 +310,9 @@ footer div:nth-child(3) {
 .skribblio:active {
     color: rgb(41, 88, 163);
 }
+
+#avatar-image{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
