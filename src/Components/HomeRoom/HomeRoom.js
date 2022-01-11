@@ -26,17 +26,21 @@ function HomeRoom() {
         avatarArray.push(asdf);
     }
     const property = style.schema.properties;
-    const URL = `https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.default[avatar.top]}
-    &hatColor[]=${property.hatColor.default[avatar.hatColor]}
-    &hairColor[]=${property.hairColor.default[avatar.hairColor]}
-    &accessoriesColor[]=${property.accessoriesColor.default[avatar.accessoriesColor]}
-    &facialHair[]=${property.facialHair.default[avatar.facialHair]}
-    &facialHairColor[]=${property.facialHairColor.default[avatar.facialHairColor]}
-    &clothes[]=${property.clothes.default[avatar.clothes]}
-    &clothesColor[]=${property.clothesColor.default[avatar.clothesColor]}
-    &eyes[]=${property.eyes.default[avatar.eyes]}
-    &eyebrow[]=${property.eyebrow.default[avatar.eyebrow]}
-    &facialHairColor[]=${property.facialHairColor.default[avatar.facialHairColor]}`;
+
+    const URL = `https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.items.enum[avatar.top]}
+    &hatColor[]=${property.hatColor.items.enum[avatar.hatColor]}
+    &hairColor[]=${property.hairColor.items.enum[avatar.hairColor]}
+    &accessories[]=${property.accessories.items.enum[avatar.accessories]}
+    &accessoriesColor[]=${property.accessoriesColor.items.enum[avatar.accessoriesColor]}
+    &facialHair[]=${property.facialHair.items.enum[avatar.facialHair]}
+    &facialHairColor[]=${property.facialHairColor.items.enum[avatar.facialHairColor]}
+    &clothes[]=${property.clothes.items.enum[avatar.clothes]}
+    &clothesColor[]=${property.clothesColor.items.enum[avatar.clothesColor]}
+    &eyes[]=${property.eyes.items.enum[avatar.eyes]}
+    &eyebrow[]=${property.eyebrow.items.enum[avatar.eyebrow]}
+    &mouth[]=${property.mouth.items.enum[avatar.mouth]};
+    &skin[]=${property.skin.items.enum[avatar.skin]};
+    &clotheGraphics[]=${property.clotheGraphics.items.enum[avatar.clotheGraphics]}`;
 
     return (
         <div className="App">
