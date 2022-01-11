@@ -64,7 +64,7 @@ export const avatarSlice = createSlice({
 })
 
 // Here we're exporting the individual actions of each thing inside of this slice
-export const {leftArrow, rightArrow, random} = avatarSlice.actions;
+export const {leftArrow, rightArrow, random, updateURL} = avatarSlice.actions;
 
 // Don't forget to export; again the reducer and the slice are not the same!!
 export default avatarSlice.reducer;

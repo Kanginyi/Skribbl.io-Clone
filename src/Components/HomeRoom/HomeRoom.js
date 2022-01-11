@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AvatarSelect from './AvatarSelect';
-import { useNavigate } from 'react-router-dom'
 import * as style from '@dicebear/avatars-avataaars-sprites';
+import { useNavigate } from 'react-router-dom'
 import {FaPaintBrush} from "react-icons/fa";
 import {BsFillSuitHeartFill, BsGithub} from "react-icons/bs";
 import "../../Stylings/HomeRoom.css";
@@ -21,14 +21,14 @@ function HomeRoom() {
     const avatar = useSelector(state => state.avatar.value);
     
     const avatarArray = [];
+    const property = style.schema.properties;
 
     for (const asdf in avatar) {
         avatarArray.push(asdf);
     }
-
+    
     useEffect(()=>{
-        const property = style.schema.properties;
-
+        console.log(property.top.items.enum[avatar.top])
         const avatarURL = `https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.items.enum[avatar.top]}
             &hatColor[]=${property.hatColor.items.enum[avatar.hatColor]}
             &hairColor[]=${property.hairColor.items.enum[avatar.hairColor]}
@@ -82,7 +82,7 @@ function HomeRoom() {
                         </input>
                     </label>
                     <div id="avatar-container">
-                        <img id="avatar-image" src={avatar.URL} alt="avatar"/>
+                        <img id="avatar-image" src={`https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.items.enum[avatar.top]}`} alt="avatar"/>
                     </div>
                     <div id="avatar-selection">
                         {/* 14 different selection options */}
