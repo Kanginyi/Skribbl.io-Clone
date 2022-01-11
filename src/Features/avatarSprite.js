@@ -23,7 +23,8 @@ export const avatarSlice = createSlice({
             eyebrow: 0, //19 items
             mouth: 0, //13 items
             skin: 0, //7 items
-            clotheGraphics: 0 //10 items
+            clotheGraphics: 0, //10 items
+            URL: ""
         }
     },
 
@@ -54,6 +55,10 @@ export const avatarSlice = createSlice({
             state.mouth = Math.floor(Math.random()*14); //13 items
             state.skin = Math.floor(Math.random()*8); //7 items
             state.clotheGraphics = Math.floor(Math.random()*11); //10 items
+        },
+
+        updateURL: (state, action) =>{
+            state.value = action.payload;
         }
     }
 })

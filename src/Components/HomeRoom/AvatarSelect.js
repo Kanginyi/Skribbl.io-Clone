@@ -69,7 +69,7 @@ function AvatarSelect({avatar, name, number}) {
         <div title={name} className="avatar-select-div">
             <BsFillArrowLeftCircleFill onClick={clickLeft}/>
                 <div className="avatar-image-container">
-                    {name} {number}
+                    {name}
                 </div>
             <BsFillArrowRightCircleFill onClick={clickRight}/>
         </div>
