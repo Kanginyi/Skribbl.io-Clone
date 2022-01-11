@@ -9,22 +9,22 @@ import {leftArrow, rightArrow, random} from "../../Features/avatarSprite";
 function AvatarSelect({avatar, name, number}) {
     const dispatch = useDispatch();
 
-    // console.log(avatar);
+    console.log(name, number);
     // console.log("Element:", name, "Number:", number);
 
     const clickLeft = (e) => {
-        console.log(e);
         dispatch(leftArrow({
-            name: number - 1
+            ...avatar,
+            [name]: number - 1
         }))
     } 
 
     const clickRight = (e) => {
         dispatch(rightArrow({
-            name: number + 1
+            ...avatar,
+            [name]: number + 1
         }))
     }
-
 
     return (
         <div title={name} className="avatar-select-div">
