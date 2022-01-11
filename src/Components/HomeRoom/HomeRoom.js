@@ -1,6 +1,6 @@
 import React from 'react';
 import AvatarSelect from './AvatarSelect';
-// import * as style from '@dicebear/avatars-avataaars-sprites';
+import * as style from '@dicebear/avatars-avataaars-sprites';
 import { useNavigate } from 'react-router-dom'
 
 import {FaPaintBrush} from "react-icons/fa";
@@ -25,6 +25,18 @@ function HomeRoom() {
     for (const asdf in avatar) {
         avatarArray.push(asdf);
     }
+    const property = style.schema.properties;
+    const URL = `https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.default[avatar.top]}
+    &hatColor[]=${property.hatColor.default[avatar.hatColor]}
+    &hairColor[]=${property.hairColor.default[avatar.hairColor]}
+    &accessoriesColor[]=${property.accessoriesColor.default[avatar.accessoriesColor]}
+    &facialHair[]=${property.facialHair.default[avatar.facialHair]}
+    &facialHairColor[]=${property.facialHairColor.default[avatar.facialHairColor]}
+    &clothes[]=${property.clothes.default[avatar.clothes]}
+    &clothesColor[]=${property.clothesColor.default[avatar.clothesColor]}
+    &eyes[]=${property.eyes.default[avatar.eyes]}
+    &eyebrow[]=${property.eyebrow.default[avatar.eyebrow]}
+    &facialHairColor[]=${property.facialHairColor.default[avatar.facialHairColor]}`;
 
     return (
         <div className="App">
