@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import AvatarSelect from './AvatarSelect';
-import * as style from '@dicebear/avatars-avataaars-sprites';
 import { useNavigate } from 'react-router-dom'
 import {FaPaintBrush} from "react-icons/fa";
 import {BsFillSuitHeartFill, BsGithub} from "react-icons/bs";
 import "../../Stylings/HomeRoom.css";
 
 // Redux Elements
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
+
 
 function HomeRoom() {
     const history = useNavigate();
-    const dispatch = useDispatch();
 
     function handlePrivateButton() {
         history("/privateroom")
@@ -19,35 +18,11 @@ function HomeRoom() {
 
     // Redux Elements
     const avatar = useSelector(state => state.avatar.value);
-    
     const avatarArray = [];
-    const property = style.schema.properties;
 
     for (const asdf in avatar) {
         avatarArray.push(asdf);
     }
-    
-    useEffect(()=>{
-        console.log(property.top.items.enum[avatar.top])
-        const avatarURL = `https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.items.enum[avatar.top]}
-            &hatColor[]=${property.hatColor.items.enum[avatar.hatColor]}
-            &hairColor[]=${property.hairColor.items.enum[avatar.hairColor]}
-            &accessories[]=${property.accessories.items.enum[avatar.accessories]}
-            &accessoriesColor[]=${property.accessoriesColor.items.enum[avatar.accessoriesColor]}
-            &facialHair[]=${property.facialHair.items.enum[avatar.facialHair]}
-            &facialHairColor[]=${property.facialHairColor.items.enum[avatar.facialHairColor]}
-            &clothes[]=${property.clothes.items.enum[avatar.clothes]}
-            &clothesColor[]=${property.clothesColor.items.enum[avatar.clothesColor]}
-            &eyes[]=${property.eyes.items.enum[avatar.eyes]}
-            &eyebrow[]=${property.eyebrow.items.enum[avatar.eyebrow]}
-            &mouth[]=${property.mouth.items.enum[avatar.mouth]};
-            &skin[]=${property.skin.items.enum[avatar.skin]};
-            &clotheGraphics[]=${property.clotheGraphics.items.enum[avatar.clotheGraphics]}`;
-
-        dispatch(updateURL({
-            [URL]: avatarURL
-        }))
-    }, [avatar])
 
     return (
         <div className="App">
@@ -82,7 +57,7 @@ function HomeRoom() {
                         </input>
                     </label>
                     <div id="avatar-container">
-                        <img id="avatar-image" src={`https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.items.enum[avatar.top]}`} alt="avatar"/>
+                        <img id="avatar-image" src={avatar.imageURL} alt="avatar"/>
                     </div>
                     <div id="avatar-selection">
                         {/* 14 different selection options */}

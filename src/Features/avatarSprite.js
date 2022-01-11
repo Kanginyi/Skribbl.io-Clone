@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+
 // Inside of this "slice", it contains all of the information about the reducer, the actions it will take, the name of the state, and the initial values of the state
 // createSlice from redux toolkit makes it easier to create everything inside of one file and export it all as one thing as well
 // We're exporting this, the slice here is not the same as the reducer we want
@@ -24,7 +25,7 @@ export const avatarSlice = createSlice({
             mouth: 0, //13 items
             skin: 0, //7 items
             clotheGraphics: 0, //10 items
-            URL: ""
+            imageURL: ''
         }
     },
 
@@ -34,6 +35,7 @@ export const avatarSlice = createSlice({
         leftArrow: (state, action) => {
             // We're trying to change the value of the state, so we get the "state.value" and assign it the "action.payload" object. We use "action.payload" to change the state
             state.value = action.payload;
+            
         },
 
         rightArrow: (state, action) => {
@@ -55,16 +57,12 @@ export const avatarSlice = createSlice({
             state.mouth = Math.floor(Math.random()*14); //13 items
             state.skin = Math.floor(Math.random()*8); //7 items
             state.clotheGraphics = Math.floor(Math.random()*11); //10 items
-        },
-
-        updateURL: (state, action) =>{
-            state.value = action.payload;
         }
     }
 })
 
 // Here we're exporting the individual actions of each thing inside of this slice
-export const {leftArrow, rightArrow, random, updateURL} = avatarSlice.actions;
+export const {leftArrow, rightArrow, random} = avatarSlice.actions;
 
 // Don't forget to export; again the reducer and the slice are not the same!!
 export default avatarSlice.reducer;
