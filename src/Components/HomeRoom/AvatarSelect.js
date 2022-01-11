@@ -9,20 +9,59 @@ import {leftArrow, rightArrow, random} from "../../Features/avatarSprite";
 function AvatarSelect({avatar, name, number}) {
     const dispatch = useDispatch();
 
-    console.log(name, number);
-    // console.log("Element:", name, "Number:", number);
+    let modNum = 0;
+    switch(name){
+        case 'top':
+            modNum = 37;
+            break;
+        case 'hatColor':
+        case 'clothesColor':
+        case 'accessoriesColor':
+            modNum = 18;
+            break;
+        case 'hairColor':
+        case 'facialHairColor':
+        case 'clothes':
+            modNum = 12;
+            break;
+        case 'accessories':
+            modNum = 6;
+            break;
+        case 'facialHair':
+        case 'clotheGraphics':
+            modNum = 10;
+            break;
+        case 'eyes':
+            modNum = 15;
+            break;
+        case 'eyebrow':
+            modNum = 19;
+            break;
+        case 'mouth':
+            modNum = 13;
+            break;
+        case 'skin':
+            modNum =  7;
+            break;
+        default:
+            break;
+    }
 
-    const clickLeft = (e) => {
+    const clickLeft = () => {
+        if (number - 1 < 0) {
+            number = modNum;
+        }
+
         dispatch(leftArrow({
             ...avatar,
             [name]: number - 1
         }))
     } 
 
-    const clickRight = (e) => {
+    const clickRight = () => {
         dispatch(rightArrow({
             ...avatar,
-            [name]: number + 1
+            [name]: (number + 1) % modNum
         }))
     }
 
