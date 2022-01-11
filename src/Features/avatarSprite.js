@@ -10,20 +10,20 @@ export const avatarSlice = createSlice({
     // Initial values of the state, passed in through the value object
     initialState: {
         value: {
-            top: 0, //37 items (1) -- switch case #
-            hatColor: 0, //18 items(2)
-            hairColor: 0, //12 items(3)
-            accessories: 0, //6 items(4)
-            accessoriesColor: 0, //18 items(2)
-            facialHair: 0, //10 items(5)
-            facialHairColor: 0, //12 items(3)
-            clothes: 0, //12 items(3)
-            clothesColor: 0, //18 items(2)
-            eyes: 0, //15 items(6)
-            eyebrow: 0, //19 items(7)
-            mouth: 0, //13 items(8)
-            skin: 0, //7 items(9)
-            clotheGraphics: 0 //10 items(5)
+            top: 0, //37 items 
+            hatColor: 0, //18 items
+            hairColor: 0, //12 items
+            accessories: 0, //6 items
+            accessoriesColor: 0, //18 items
+            facialHair: 0, //10 items
+            facialHairColor: 0, //12 items
+            clothes: 0, //12 items
+            clothesColor: 0, //18 items
+            eyes: 0, //15 items
+            eyebrow: 0, //19 items
+            mouth: 0, //13 items
+            skin: 0, //7 items
+            clotheGraphics: 0 //10 items
         }
     },
 
@@ -39,9 +39,22 @@ export const avatarSlice = createSlice({
             state.value = action.payload;
         },
 
-        // random: {
-            
-        // }
+        random: (state) => {
+            state.top = Math.floor(Math.random()*38); //37 items 
+            state.hatColor = Math.floor(Math.random()*19); //18 items
+            state.hairColor = Math.floor(Math.random()*13); //12 items
+            state.accessories = Math.floor(Math.random()*7); //6 items
+            state.accessoriesColor = Math.floor(Math.random()*19); //18 items
+            state.facialHair = Math.floor(Math.random()*11); //10 items
+            state.facialHairColor = Math.floor(Math.random()*13); //12 items
+            state.clothes = Math.floor(Math.random()*13); //12 items
+            state.clothesColor = Math.floor(Math.random()*19); //18 items
+            state.eyes = Math.floor(Math.random()*16); //15 items
+            state.eyebrow = Math.floor(Math.random()*20); //19 items
+            state.mouth = Math.floor(Math.random()*14); //13 items
+            state.skin = Math.floor(Math.random()*8); //7 items
+            state.clotheGraphics = Math.floor(Math.random()*11); //10 items
+        }
     }
 })
 
