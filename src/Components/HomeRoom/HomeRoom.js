@@ -1,6 +1,6 @@
 import React from 'react';
 import AvatarSelect from './AvatarSelect';
-// import * as style from '@dicebear/avatars-avataaars-sprites';
+import * as style from '@dicebear/avatars-avataaars-sprites';
 import { useNavigate } from 'react-router-dom'
 
 import {FaPaintBrush} from "react-icons/fa";
@@ -25,6 +25,22 @@ function HomeRoom() {
     for (const asdf in avatar) {
         avatarArray.push(asdf);
     }
+    const property = style.schema.properties;
+
+    const URL = `https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=${property.top.items.enum[avatar.top]}
+    &hatColor[]=${property.hatColor.items.enum[avatar.hatColor]}
+    &hairColor[]=${property.hairColor.items.enum[avatar.hairColor]}
+    &accessories[]=${property.accessories.items.enum[avatar.accessories]}
+    &accessoriesColor[]=${property.accessoriesColor.items.enum[avatar.accessoriesColor]}
+    &facialHair[]=${property.facialHair.items.enum[avatar.facialHair]}
+    &facialHairColor[]=${property.facialHairColor.items.enum[avatar.facialHairColor]}
+    &clothes[]=${property.clothes.items.enum[avatar.clothes]}
+    &clothesColor[]=${property.clothesColor.items.enum[avatar.clothesColor]}
+    &eyes[]=${property.eyes.items.enum[avatar.eyes]}
+    &eyebrow[]=${property.eyebrow.items.enum[avatar.eyebrow]}
+    &mouth[]=${property.mouth.items.enum[avatar.mouth]};
+    &skin[]=${property.skin.items.enum[avatar.skin]};
+    &clotheGraphics[]=${property.clotheGraphics.items.enum[avatar.clotheGraphics]}`;
 
     return (
         <div className="App">
