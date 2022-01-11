@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+
 // Inside of this "slice", it contains all of the information about the reducer, the actions it will take, the name of the state, and the initial values of the state
 // createSlice from redux toolkit makes it easier to create everything inside of one file and export it all as one thing as well
 // We're exporting this, the slice here is not the same as the reducer we want
@@ -23,7 +24,8 @@ export const avatarSlice = createSlice({
             eyebrow: 0, //19 items
             mouth: 0, //13 items
             skin: 0, //7 items
-            clotheGraphics: 0 //10 items
+            clotheGraphics: 0, //10 items
+            imageURL: 'https://avatars.dicebear.com/api/avataaars/:seed.svg?top[]=shortHair&hatColor[]=black&hairColor[]=auburn&accessories[]=kurt&accessoriesColor[]=black&facialHair[]=medium&facialHairColor[]=auburn&clothes[]=blazer&clothesColor[]=black&eyes[]=close&eyebrow[]=angry&mouth[]=concerned&skin[]=tanned&clotheGraphics[]=skullOutline'
         }
     },
 
@@ -33,6 +35,7 @@ export const avatarSlice = createSlice({
         leftArrow: (state, action) => {
             // We're trying to change the value of the state, so we get the "state.value" and assign it the "action.payload" object. We use "action.payload" to change the state
             state.value = action.payload;
+            
         },
 
         rightArrow: (state, action) => {
