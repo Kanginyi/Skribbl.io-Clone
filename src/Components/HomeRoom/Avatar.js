@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from '@dicebear/avatars-avataaars-sprites';
+
 
 function Avatar() {
     return (

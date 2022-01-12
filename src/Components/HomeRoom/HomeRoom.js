@@ -8,7 +8,6 @@ import "../../Stylings/HomeRoom.css";
 // Redux Elements
 import {useSelector} from "react-redux";
 
-
 function HomeRoom() {
     const history = useNavigate();
 
