@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useState} from 'react';
 import AvatarSelect from './AvatarSelect';
 import { useNavigate } from 'react-router-dom'
 import {FaPaintBrush} from "react-icons/fa";
@@ -10,9 +10,15 @@ import {useSelector} from "react-redux";
 
 function HomeRoom() {
     const history = useNavigate();
+    const [username, setUsername] = useState("")
 
-    function handlePrivateButton() {
+    function handlePrivateButton(event) {
         history("/privateroom")
+        setUsername(()=> event.target.parentElement.parentElement.parentElement.children[0].childNodes[0].firstChild.value)
+    }
+
+    function handlePlayButton(event) {
+        setUsername(()=> event.target.parentElement.parentElement.parentElement.children[0].childNodes[0].firstChild.value)
     }
 
     // Redux Elements
@@ -80,12 +86,13 @@ function HomeRoom() {
                         <button
                             id="play-button"
                             className="homepage-button"
+                            onClick={handlePlayButton}
                         >Play!</button>
 
                         <button
                             id="private-button"
                             className="homepage-button"
-                            onClick={()=>handlePrivateButton()}
+                            onClick={handlePrivateButton}
                         >Create Private Room</button>
                     </div>
                 </section>
@@ -108,7 +115,7 @@ function HomeRoom() {
                     <details>
                         <summary>About</summary>
                             <div>
-                                This is a website clone based on <a className="skribblio" href="https://skribbl.io/" target="_blank"><b>Skribbl.io</b></a>; a website where you can play a Pictionary-style game.<br/>
+                                This is a website clone based on <a className="skribblio" href="https://skribbl.io/" target="blank"><b>Skribbl.io</b></a>; a website where you can play a Pictionary-style game.<br/>
                                 One game consists of any number of rounds, where one person is the artist and the others are the guessers. The artist will draw out their chosen word while the others will have to guess what it is in order to gain points.<br/>
                                 The person with the most points when all the rounds are up will then be crowned the winner. WOOOOOO!
                             </div>
@@ -128,7 +135,7 @@ function HomeRoom() {
 
             <footer id="homepage-footer">
                 <div>
-                    <BsGithub style={{color: "white", fontSize: "18px"}}/> made by <a href="https://github.com/samlee1097" target="_blank">@samlee1097</a> & <a href="https://github.com/Kanginyi" target="_blank">@Kanginyi</a>
+                    <BsGithub style={{color: "white", fontSize: "18px"}}/> made by <a href="https://github.com/samlee1097" target="blank">@samlee1097</a> & <a href="https://github.com/Kanginyi" target="blank">@Kanginyi</a>
                 </div>
 
                 <div>
