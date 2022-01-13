@@ -102,9 +102,13 @@ function HomeRoom(setUsername) {
                             <div id="news-update">
                                 Hello World!<br/><br/>
                                 We just:<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢Implemented early phases of <strong>Redux</strong> into our application<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<strong>HomeRoom:</strong> Animate our title
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢<strong>Homepage:</strong> Implemented "Avataaars" customization options.<br/>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢Implemented early phases of <strong>Redux</strong> into our application.<br/>
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢Began looking into <strong>Socket.io</strong> to continue towards cooperative play!
                                 <br/><br/>
+
                                 Please continue to check in as we work together to flesh out the rest of the application! :)<br/>
                                 <br/>
                                 <i>Thanks so much</i> <BsFillSuitHeartFill style={{color: "red"}}/>
