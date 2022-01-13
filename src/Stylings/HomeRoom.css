@@ -311,8 +311,13 @@ footer div:nth-child(3) {
     color: rgb(41, 88, 163);
 }
 
+#avatar-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 #avatar-image{
-    width: 200px;
+    width: auto;
     height: 200px;
-    margin: 0 auto;
 }
