@@ -2,13 +2,38 @@ import React, {useState, useEffect} from 'react';
 import skribblio_timer from "./pictures/skribblio-clock.gif";
 
 function Clock() {
-   const [timer, setTimer] = useState(100);
+   const [timer, setTimer] = useState(3);
 
+   let ticker;
+
+   useEffect(() => {
+      ticker = setInterval(() => setTimer(prev => prev - 1), 1000);
+
+      if (timer === 0) {
+         setTimer(prev => prev === 0);
+         clearInterval(ticker);
+      }
+
+      // return function cleanup() {
+      //    clearInterval(ticker);
+      // }
+   }, []);
+
+
+   
+   console.log(timer);
    // useEffect(() => {
-   //    setInterval(() => {
-   //       setTimer(timer + 1)
-   //    }, 1000);
-   // }, [timer])
+   //    let ticker;
+
+   //    ticker = setInterval(() => {
+   //       if (timer === 0) {
+   //          clearInterval(ticker);
+   //          alert("BING BONG");
+   //       } else {
+   //          setTimer(prev => prev - 1);
+   //       }
+   //    }, 1000)
+   // }, [])
 
     return (
        <div>
