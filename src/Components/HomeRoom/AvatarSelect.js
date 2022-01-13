@@ -7,7 +7,7 @@ import * as style from '@dicebear/avatars-avataaars-sprites';
 import {useDispatch} from "react-redux";
 import {leftArrow, rightArrow} from "../../Features/avatarSprite";
 
-function AvatarSelect({avatar, name, number}) {
+function AvatarSelect({avatar, name, number, sectionName}) {
     const dispatch = useDispatch();
 
     let modNum = 0;
@@ -78,7 +78,7 @@ function AvatarSelect({avatar, name, number}) {
         <div title={name} className="avatar-select-div">
             <BsFillArrowLeftCircleFill onClick={clickLeft}/>
                 <div className="avatar-image-container">
-                    {name}
+                    {sectionName}
                 </div>
             <BsFillArrowRightCircleFill onClick={clickRight}/>
         </div>
