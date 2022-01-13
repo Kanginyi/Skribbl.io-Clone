@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import AvatarSelect from './AvatarSelect';
 import { useNavigate } from 'react-router-dom'
 import {FaPaintBrush} from "react-icons/fa";
@@ -8,9 +8,8 @@ import "../../Stylings/HomeRoom.css";
 // Redux Elements
 import {useSelector} from "react-redux";
 
-function HomeRoom() {
+function HomeRoom(setUsername) {
     const history = useNavigate();
-    const [username, setUsername] = useState("")
 
     function handlePrivateButton(event) {
         history("/privateroom")
@@ -25,8 +24,8 @@ function HomeRoom() {
     const avatar = useSelector(state => state.avatar.value);
     const avatarArray = [];
 
-    for (const asdf in avatar) {
-        avatarArray.push(asdf);
+    for (const attr in avatar) {
+        avatarArray.push(attr);
     }
 
     return (

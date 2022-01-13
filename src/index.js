@@ -11,7 +11,7 @@ import avatarReducer from "./Features/avatarSprite";
 
 const store = configureStore({
     reducer: {
-        avatar: avatarReducer
+        avatar: avatarReducer,
     }
 });
 

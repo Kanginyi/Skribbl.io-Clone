@@ -8,13 +8,13 @@ import PlayerContainer from './PlayerContainer/PlayerContainer';
 import Header from './Header/Header';
 import '../../Stylings/GameRoom.css'
 
-// Create a socket server
-const socket = io("https://localhost:3000", {
-    // Specify transports or else they can be buffered/wait
-    transports: ["websocket", "polling"]
-});
+// // Create a socket server
+// const socket = io("https://localhost:3000", {
+//     // Specify transports or else they can be buffered/wait
+//     transports: ["websocket", "polling"]
+// });
 
-function GameRoom() {        
+function GameRoom(username) {        
     const [utensil, SetUtensil] = useState({
         tool: "brush",
         weight: 5,
@@ -23,34 +23,33 @@ function GameRoom() {
 
     const [lastColor, setLastColor] = useState(utensil["color"]);    
 
-    const [users, setUsers] = useState([]);
-    const [message, setMessage] = useState("");
-    const [listMessage, setListMessage] = useState([]);
-    const username = prompt("what is your username");
+    // const [users, setUsers] = useState([]);
+    // const [message, setMessage] = useState("");
+    // const [listMessage, setListMessage] = useState([]);
 
-    useEffect(() => {
-        socket.on("connect", () => {
-          socket.emit("username", username);
-        });
+    // useEffect(() => {
+    //     socket.on("connect", () => {
+    //       socket.emit("username", username);
+    //     });
     
-        socket.on("users", users => {
-          setUsers(users);
-        });
+    //     socket.on("users", users => {
+    //       setUsers(users);
+    //     });
     
-        socket.on("message", message => {
-          setListMessage(messages => [...messages, message]);
-        });
+    //     socket.on("message", message => {
+    //       setListMessage(messages => [...messages, message]);
+    //     });
     
-        socket.on("connected", user => {
-          setUsers(users => [...users, user]);
-        });
+    //     socket.on("connected", user => {
+    //       setUsers(users => [...users, user]);
+    //     });
     
-        socket.on("disconnected", id => {
-          setUsers(users => {
-            return users.filter(user => user.id !== id);
-          });
-        });
-      }, []);
+    //     socket.on("disconnected", id => {
+    //       setUsers(users => {
+    //         return users.filter(user => user.id !== id);
+    //       });
+    //     });
+    //   }, []);
 
     function handleUtensil(updateItem, keyHolder){
         const newUtensil={...utensil};
