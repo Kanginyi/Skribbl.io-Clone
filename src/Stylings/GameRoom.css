@@ -64,11 +64,6 @@
     margin-left: 5px;
 }
 
-#clock-div, #rounds-div{
-    width: fit-content;
-    margin: auto 15px;
-}
-
 #showword-div{
     margin: auto;
 }
@@ -194,6 +189,23 @@
     background: #9664c8;
 }
 
+#clock-div, #rounds-div{
+   margin: auto 15px;
+}
+
+#rounds-div {
+   width: fit-content;
+}
+
+#clock-div {
+   width: 39px;
+   height: 53px;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 #skribblio-timer {
    position: absolute;
    top: -2.5px;
@@ -201,4 +213,10 @@
 
    height: 55px;
    width: 55px;
+}
+
+#timer-ticker {
+   position: relative;
+
+   z-index: 1;
 }
