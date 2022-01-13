@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
+import io from 'socket.io-client';
+
 import ToolBox from './Canvas/ToolBox';
 import DrawingCanvas from './Canvas/DrawingCanvas'
 import ChatBox from './Chatbox/ChatBox';
@@ -6,14 +8,48 @@ import PlayerContainer from './PlayerContainer/PlayerContainer';
 import Header from './Header/Header';
 import '../../Stylings/GameRoom.css'
 
-function GameRoom() {
+// // Create a socket server
+// const socket = io("https://localhost:3000", {
+//     // Specify transports or else they can be buffered/wait
+//     transports: ["websocket", "polling"]
+// });
+
+function GameRoom(username) {        
     const [utensil, SetUtensil] = useState({
         tool: "brush",
         weight: 5,
         color: "black"
-    })
+    });
 
-    const [lastColor, setLastColor] = useState(utensil["color"])
+    const [lastColor, setLastColor] = useState(utensil["color"]);    
+
+    // const [users, setUsers] = useState([]);
+    // const [message, setMessage] = useState("");
+    // const [listMessage, setListMessage] = useState([]);
+
+    // useEffect(() => {
+    //     socket.on("connect", () => {
+    //       socket.emit("username", username);
+    //     });
+    
+    //     socket.on("users", users => {
+    //       setUsers(users);
+    //     });
+    
+    //     socket.on("message", message => {
+    //       setListMessage(messages => [...messages, message]);
+    //     });
+    
+    //     socket.on("connected", user => {
+    //       setUsers(users => [...users, user]);
+    //     });
+    
+    //     socket.on("disconnected", id => {
+    //       setUsers(users => {
+    //         return users.filter(user => user.id !== id);
+    //       });
+    //     });
+    //   }, []);
 
     function handleUtensil(updateItem, keyHolder){
         const newUtensil={...utensil};

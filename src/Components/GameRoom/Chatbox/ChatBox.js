@@ -5,7 +5,7 @@ function ChatBox() {
        <div id="gameroom-chatbox">
            <p>ChatBox</p>
            {/* Chat input – 330 x 30 
-               Chatbox – 330 x 580*/}
+               Chatbox – 330 x 580*/} 
        </div>
     );
 }
