@@ -196,9 +196,9 @@
 
 #skribblio-timer {
    position: absolute;
-   top: -5px;
-   left: 10px;
+   top: -2.5px;
+   left: 12px;
 
-   height: 60px;
-   width: 60px;
+   height: 55px;
+   width: 55px;
 }
