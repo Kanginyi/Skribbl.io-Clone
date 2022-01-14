@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Rounds() {
+function Rounds({rounds, roundsLeft}) {
+
     return (
        <div>
-           <p>Rounds</p>
+           <p>Round {roundsLeft} of {rounds}</p>
        </div>
     );
 }
