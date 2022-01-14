@@ -14,7 +14,7 @@ import '../../Stylings/GameRoom.css'
 //     transports: ["websocket", "polling"]
 // });
 
-function GameRoom({username, drawTime}) {      
+function GameRoom({username, drawTime, rounds}) {      
 
     const [utensil, SetUtensil] = useState({
         tool: "brush",
@@ -72,7 +72,7 @@ function GameRoom({username, drawTime}) {
     return (
         <div className="container">
             
-            <Header drawTime={drawTime}/>
+            <Header drawTime={drawTime} rounds={rounds}/>
 
             <div id = "middle-section-gameroom">
                 <div>

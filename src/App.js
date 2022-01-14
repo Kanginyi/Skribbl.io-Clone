@@ -9,13 +9,14 @@ import PrivateRoom from "./Components/PrivateRoom/PrivateRoom";
 function App() {
   const [username, setUsername] = useState("");
   const [drawTime, setDrawTime] = useState(0);
+  const [rounds, setRounds] = useState(0)
 
   return (
       <Router>
         <Routes> 
             <Route path="/" element={<HomeRoom setUsername={setUsername}/>}/>
-            <Route path="gameroom" element={<GameRoom username={username} drawTime={drawTime}/>}/>
-            <Route path="privateroom" element={<PrivateRoom username={username} setDrawTime={setDrawTime}/>}/>
+            <Route path="gameroom" element={<GameRoom username={username} drawTime={drawTime} rounds={rounds}/>}/>
+            <Route path="privateroom" element={<PrivateRoom username={username} setDrawTime={setDrawTime} setRounds={setRounds}/>}/>
         </Routes>
     </Router>
   );

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import skribblio_timer from "./pictures/skribblio-clock.gif";
 
-function Clock({drawTime}) {
+function Clock({drawTime, setRoundsLeft}) {
    const [timer, setTimer] = useState(drawTime);
 
    useEffect(() => {
@@ -9,6 +9,7 @@ function Clock({drawTime}) {
          if (timer > 0) {
             setTimer(prev=>prev-1);
          } else if (timer <= 0){
+            setRoundsLeft(prev=>prev-1)
             clearInterval(ticker);
             alert("eric");
          }
@@ -19,7 +20,6 @@ function Clock({drawTime}) {
        }
 
    }, [timer]);
-
 
     return (
        <div>
