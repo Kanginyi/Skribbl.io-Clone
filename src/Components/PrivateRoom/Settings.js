@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-function Settings() {
+function Settings({setDrawTime}) {
     const history = useNavigate();
 
-    function startGame() {
+    function startGame(e) {
+        let drawTime = e.target.parentElement.children[2].children[1].value;
+        setDrawTime(parseInt((drawTime), 10))
         history("/gameroom");
     }
 
@@ -49,7 +51,7 @@ function Settings() {
 
                 <input id="checkbox" type="checkbox" name="exclusive"/><span id="checkbox-text">Use custom words exculsively.</span>
 
-                <button id="start-custom-button" onClick={() => startGame()}>Start Game</button>
+                <button id="start-custom-button" onClick={startGame}>Start Game</button>
            </div>
        </div>
     );

@@ -4,11 +4,11 @@ import PrivateRoomPlayers from './PrivateRoomPlayers';
 import InviteFriends from './InviteFriends';
 import '../../Stylings/PrivateRoom.css'
 
-function PrivateRoom() {
+function PrivateRoom({setDrawTime}) {
     return (
         <>
             <div id="private-room-top">
-            <Settings/>
+            <Settings setDrawTime={setDrawTime}/>
             <PrivateRoomPlayers/>
             </div> 
             <div id="private-room-bottom">
