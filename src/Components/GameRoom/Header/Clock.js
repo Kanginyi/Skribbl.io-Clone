@@ -8,10 +8,9 @@ function Clock() {
       let ticker = setInterval(() => {
          if (timer > 0) {
             setTimer(prev=>prev-1);
-         }
-
-         if (timer === 0){
+         } else if (timer === 0){
             clearInterval(ticker);
+            alert("eric")
          }
       }, 1000)
       
