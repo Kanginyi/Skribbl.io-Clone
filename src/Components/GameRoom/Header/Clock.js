@@ -4,36 +4,23 @@ import skribblio_timer from "./pictures/skribblio-clock.gif";
 function Clock() {
    const [timer, setTimer] = useState(3);
 
-   let ticker;
-
    useEffect(() => {
-      ticker = setInterval(() => setTimer(prev => prev - 1), 1000);
+      let ticker = setInterval(() => {
+         if (timer > 0) {
+            setTimer(prev=>prev-1);
+         }
 
-      if (timer === 0) {
-         setTimer(prev => prev === 0);
+         if (timer === 0){
+            clearInterval(ticker);
+         }
+      }, 1000)
+      
+      return () => {
          clearInterval(ticker);
-      }
+       }
 
-      // return function cleanup() {
-      //    clearInterval(ticker);
-      // }
-   }, []);
+   }, [timer]);
 
-
-   
-   console.log(timer);
-   // useEffect(() => {
-   //    let ticker;
-
-   //    ticker = setInterval(() => {
-   //       if (timer === 0) {
-   //          clearInterval(ticker);
-   //          alert("BING BONG");
-   //       } else {
-   //          setTimer(prev => prev - 1);
-   //       }
-   //    }, 1000)
-   // }, [])
 
     return (
        <div>
