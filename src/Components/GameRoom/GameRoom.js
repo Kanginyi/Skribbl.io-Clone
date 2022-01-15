@@ -6,8 +6,10 @@ import ChatBox from './Chatbox/ChatBox';
 import PlayerContainer from './PlayerContainer/PlayerContainer';
 import Header from './Header/Header';
 import '../../Stylings/GameRoom.css'
+      
 
-function GameRoom(username) {        
+function GameRoom({username, drawTime, rounds}) {      
+
     const [utensil, SetUtensil] = useState({
         tool: "brush",
         weight: 5,
@@ -34,7 +36,9 @@ function GameRoom(username) {
 
     return (
         <div className="container">
-            <Header/>
+            
+            <Header drawTime={drawTime} rounds={rounds}/>
+
             <div id = "middle-section-gameroom">
                 <div>
                     <PlayerContainer/>
