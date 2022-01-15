@@ -7,7 +7,6 @@ import PlayerContainer from './PlayerContainer/PlayerContainer';
 import Header from './Header/Header';
 import '../../Stylings/GameRoom.css'
 
-
 function GameRoom({username, drawTime, rounds}) {      
 
     const [utensil, SetUtensil] = useState({
@@ -31,7 +30,6 @@ function GameRoom({username, drawTime, rounds}) {
                 } 
                 newUtensil[keyHolder] = updateItem.toLowerCase();
                 SetUtensil(()=>newUtensil)
-        
             }
     }
 
