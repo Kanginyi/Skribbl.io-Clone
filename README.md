@@ -59,4 +59,4 @@ User will be able to:
 
 
 
-**Stretch goals:** 
+**Stretch goals:**  
